@@ -1,0 +1,146 @@
+{
+    "Title": "Before Nightfall",
+    "Intro": "You have been in a plane crash. You are now stranded on an unknown island. What kind of dangers will you encounter as you try to get off the island?",
+    "Inventory": [],
+    "Radio": ["<i>Pzzz.. Hel..lo..if you can hear this...island.....dangerous at night...</i>", "<i>Get to rendevous point before night fall...it's just passed the camp site..</i>", "<i>...creatures..hostile...may be pacified with....food.</i>"],
+    "Credits": "Story created by Lorraine Torres (loctorre@ucsc.edu), Source Code by Adam Smith (amsmith@ucsc.edu).",
+    "InitialLocation": "CrashSite",
+    "Locations": {
+        "CrashSite": {
+            "Body": "This is the crash site. There are large sections of the plane and debris scattered on the ground around you.<br>You call out, no one answers. There is no one in sight... maybe try looking around for anything useful?",
+            "Choices": [
+                {
+                    "Text": "Search Left",
+                    "Target": "CrashLeft"
+                },
+                {
+                    "Text": "Go Forward",
+                    "Target": "Canyon"
+                },
+                {
+                    "Text": "Search Right",
+                    "Target": "CrashRight"
+                }
+            ]
+        },
+        "CrashLeft": {
+            "Body": "There are plane scraps here. It looks like a cockpit, or what is left of it.",
+            "Choices": [
+                {
+                    "Text": "Go Back",
+                    "Target": "CrashSite"
+                },
+                {
+                    "Text": "Search the Cockpit ",
+                    "Target": "InteractiveLocation"
+                }
+            ]
+        },
+        "InteractiveLocation": {
+            "Body": "There's a radio here! Maybe it still works...try turning it on.",
+            "Choices": [
+                {
+                    "Text": "Leave Radio",
+                    "Target": "CrashLeft"
+                }
+            ]
+        },
+        "CrashRight": {
+            "Body": "This looks like the plane's broken engine. There isn't much else here.",
+            "Choices": [
+                {
+                    "Text": "Go Back",
+                    "Target": "CrashSite"
+                }
+            ]
+        },
+        "Canyon": {
+            "Body": "There is a large canyon in front of you. It stretches as far as the eye can see. It's too wide to jump.<br>There is a weak bridge you can take to get to the other side or you can try going around, but who knows how long that will take. ",
+            "Choices": [
+                {
+                    "Text": "Cross Bridge",
+                    "Target": "Forest"
+                },
+                {
+                    "Text": "Go Back to Crash Site",
+                    "Target": "CrashSite"
+                },
+                {
+                    "Text": "Go Around the Canyon",
+                    "Target": "LockedLocation"
+                }
+            ]
+        },
+        "Forest": {
+            "Body": "You're in the forest. There are a lot of tall trees here. Vines hang from their tops.",
+            "Choices": [
+                {
+                    "Text": "Go Left",
+                    "Target": "Shore"
+                },
+                {
+                    "Text": "Go Back to Canyon",
+                    "Target": "Canyon"
+                },
+                {
+                    "Text": "Go Right",
+                    "Target": "KeyLocation"
+                }
+            ]
+        },
+        "Shore": {
+            "Body": "You've reached the island's shore. There is nothing here but the vast empty sea. Swimming doesn't seem like a good idea.",
+            "Choices": [
+                {
+                    "Text": "Go Back",
+                    "Target": "Forest"
+                }
+            ]
+        },
+        "KeyLocation": {
+            "Body": "There are more trees here. Some tasty looking bananas are growing from their tops.",
+            "Choices": [
+                {
+                    "Text": "Go Back",
+                    "Target": "Forest"
+                }
+            ]
+        },
+        "LockedLocation": {
+            "Body": "There is a angry creature blocking the path forward! Trying to get around it in this state is not recommended.<br>Maybe there's something you can use to pacify it.",
+            "Choices": [
+                {
+                    "Text": "Go Back",
+                    "Target": "Canyon"
+                }
+            ],
+            "LockedChoices": [
+                {
+                    "Text": "Give Banana",
+                    "Target": "UnlockedLocation"
+                }
+            ]
+        },
+        "UnlockedLocation": {
+            "Body": "You throw the banana on the ground. The creature quickly picks it up and retreats into the trees. The path forward is now clear.",
+            "Choices": [
+                {
+                    "Text": "Go Forward",
+                    "Target": "AbandonedCamp"
+                }
+            ]
+        },
+        "AbandonedCamp": {
+            "Body": "This appears to be an abandoned campsite. The rendevous point must be close by.",
+            "Choices": [
+                {
+                    "Text": "Go Forward",
+                    "Target": "RendezvousPoint"
+                }
+            ]
+        },
+        "RendezvousPoint": {
+            "Body": "Hurray! You made it to the Rendevous Point before nightfall. Now let's hope help arrives in time..."
+        }
+    }
+}
