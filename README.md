@@ -1,18 +1,8 @@
 # StoryGraphTool
 
-An exercise in building data-driven game design
+This is a simple Link-based Game World. This game is called "Before Nighfall" -- In it players find themselves stranded on a dangerous island and the goal is to reach the rendezvous point before nightfall. This world features a [Location-specific interactive mechanism] in the form of a message-displaying radio which can be turned on and off; and a [Lock and key puzzle] where players explore the game throroughly to collect the "Banana" and unlock the winning path.
 
-## Activity Instructions
-
-This activity gets you thinking about how to keep key aspects of your game design in data files (e.g. JSON files) rather than in code files (e.g. JavaScript files). We want to tell a simple choice-based story, but we don't want to have to create a new block of JavaScript for each location in our story world. We might want to have special logic for the start and end of the story, but most of the middle scenes of the story shoudl share the same logic. We'll put everything needed to customize different instances of this middle scene into a file called `myStory.json` and only make a edits to `rules.js`.
-
-### Programming
-
-Open this project in your favorite text editor and start a local web server. View `index.html` in your browser through the server you started. You should see the title of the story and the first choice, but other aspects of the game should be broken.
-
-In your text editor, open `rules.js` and follow the `TODO` comments as a guide to repairing the code.
-
-If your repair works, you should be able to play all the way through the end of the story.
+This game was made using source code by Adam Smith (amsmith@ucsc.edu).  
 
 ### Authoring
 
